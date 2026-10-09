@@ -1,0 +1,235 @@
+[gd_scene load_steps=27 format=3 uid="uid://77te7m3pbjj2"]
+
+[ext_resource type="Script" uid="uid://coeyaypi1obp6" path="res://scripts/person.gd" id="1_5dovg"]
+[ext_resource type="Texture2D" uid="uid://cukogdt7nnbx8" path="res://resources/deadpeople.png" id="2_h4n5y"]
+[ext_resource type="Texture2D" uid="uid://ca378h1bsimme" path="res://resources/people.png" id="2_jf287"]
+[ext_resource type="AudioStream" uid="uid://dkvswanutnq7p" path="res://resources/sounds/dragon-studio-woman-screaming-sfx-screaming-sound-effect-320169.mp3" id="4_pfaeq"]
+[ext_resource type="AudioStream" uid="uid://nr1ljibpucj5" path="res://resources/sounds/universfield-male-scream-121085.mp3" id="5_2jjoq"]
+[ext_resource type="AudioStream" uid="uid://bo47yvuifctoj" path="res://resources/sounds/universfield-man-pain-scream-567203.mp3" id="6_ym70v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdp4j"]
+atlas = ExtResource("2_h4n5y")
+region = Rect2(0, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4n5y"]
+atlas = ExtResource("2_jf287")
+region = Rect2(0, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8487m"]
+atlas = ExtResource("2_jf287")
+region = Rect2(8, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfaeq"]
+atlas = ExtResource("2_jf287")
+region = Rect2(16, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itwwj"]
+atlas = ExtResource("2_h4n5y")
+region = Rect2(0, 24, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jjoq"]
+atlas = ExtResource("2_jf287")
+region = Rect2(0, 24, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym70v"]
+atlas = ExtResource("2_jf287")
+region = Rect2(8, 24, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qhow"]
+atlas = ExtResource("2_jf287")
+region = Rect2(16, 24, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usdqe"]
+atlas = ExtResource("2_h4n5y")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_526uv"]
+atlas = ExtResource("2_jf287")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhvuw"]
+atlas = ExtResource("2_jf287")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06ebq"]
+atlas = ExtResource("2_jf287")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqdfk"]
+atlas = ExtResource("2_h4n5y")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqr4j"]
+atlas = ExtResource("2_jf287")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l302h"]
+atlas = ExtResource("2_jf287")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiup0"]
+atlas = ExtResource("2_jf287")
+region = Rect2(16, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lik2q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdp4j")
+}],
+"loop": false,
+"name": &"blakeD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4n5y")
+}],
+"loop": false,
+"name": &"blakeI",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8487m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfaeq")
+}],
+"loop": true,
+"name": &"blakeW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itwwj")
+}],
+"loop": false,
+"name": &"bobD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jjoq")
+}],
+"loop": false,
+"name": &"bobI",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym70v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qhow")
+}],
+"loop": true,
+"name": &"bobW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usdqe")
+}],
+"loop": false,
+"name": &"karenD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_526uv")
+}],
+"loop": false,
+"name": &"karenI",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhvuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06ebq")
+}],
+"loop": true,
+"name": &"karenW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqdfk")
+}],
+"loop": false,
+"name": &"kateD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqr4j")
+}],
+"loop": false,
+"name": &"kateI",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l302h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kiup0")
+}],
+"loop": true,
+"name": &"kateW",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tys1d"]
+radius = 3.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jf287"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h4n5y"]
+radius = 3.1622777
+
+[node name="person" type="CharacterBody2D"]
+script = ExtResource("1_5dovg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lik2q")
+animation = &"blakeI"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tys1d")
+
+[node name="cartouch" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cartouch"]
+shape = SubResource("CircleShape2D_jf287")
+
+[node name="hospital" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hospital"]
+shape = SubResource("CircleShape2D_h4n5y")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+avoidance_enabled = true
+max_speed = 30.0
+debug_path_custom_color = Color(1, 0, 0, 1)
+
+[node name="scream1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_pfaeq")
+
+[node name="scream2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_2jjoq")
+
+[node name="scream3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_ym70v")
+
+[connection signal="body_entered" from="cartouch" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="cartouch" to="." method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="hospital" to="." method="_on_hospital_area_entered"]

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://di46i016oqllv"]
+
+[ext_resource type="Texture2D" uid="uid://mwl0ktydmteu" path="res://resources/buttons/panel-009.png" id="1_0ia0q"]
+[ext_resource type="Script" uid="uid://ciai4h8q2xwce" path="res://scripts/button.gd" id="2_a8w3t"]
+[ext_resource type="Texture2D" uid="uid://dbpne8cxepfnn" path="res://start.png" id="2_sbccg"]
+[ext_resource type="Texture2D" uid="uid://bvnwcd7e80e2x" path="res://resources/logoNoBg.png" id="3_nvmvw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1rxj"]
+atlas = ExtResource("2_sbccg")
+region = Rect2(0, 0, 64, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sl1ut"]
+atlas = ExtResource("2_sbccg")
+region = Rect2(0, 25, 64, 25)
+
+[node name="color_select" type="Node2D" unique_id=121505847]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2021458371]
+z_index = 1
+offset_left = -15.0
+offset_top = -12.0
+offset_right = 1027.0
+offset_bottom = 773.0
+color = Color(0.17254902, 0.67058825, 1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=114277337]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1365125171]
+visible = false
+z_index = 1
+offset_left = 407.0
+offset_top = 503.0
+offset_right = 601.0
+offset_bottom = 582.0
+texture = ExtResource("1_0ia0q")
+region_rect = Rect2(0, 0, 96, 96)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="start" type="TextureButton" parent="." unique_id=477635486]
+z_index = 1
+offset_left = 407.0
+offset_top = 582.0
+offset_right = 478.0
+offset_bottom = 610.5344
+scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_o1rxj")
+texture_pressed = SubResource("AtlasTexture_sl1ut")
+texture_hover = SubResource("AtlasTexture_sl1ut")
+script = ExtResource("2_a8w3t")
+
+[node name="LogoNoBg" type="Sprite2D" parent="." unique_id=455206529]
+z_index = 1
+position = Vector2(513.5, 207)
+texture = ExtResource("3_nvmvw")
+
+[connection signal="pressed" from="start" to="start" method="_on_pressed"]

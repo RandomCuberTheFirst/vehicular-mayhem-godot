@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckl88g4ovr36g"]
+
+[ext_resource type="Script" uid="uid://cnl47o0hh27ii" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://3hxs05jqw0au" path="res://scenes/player.tscn" id="2_sugp2"]
+[ext_resource type="Script" uid="uid://bomc0oskfsdqj" path="res://scripts/container.gd" id="3_jyhfs"]
+[ext_resource type="Script" uid="uid://devg52u4olbea" path="res://scripts/camera_2d.gd" id="3_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
+size = Vector2(1024, 764)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_0wfyh")
+
+[node name="levelManager" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="player" parent="levelManager" instance=ExtResource("2_sugp2")]
+z_index = 1
+
+[node name="gameUI" type="CanvasLayer" parent="."]
+script = ExtResource("3_jyhfs")
+
+[node name="Control" type="Control" parent="gameUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="more" type="Button" parent="gameUI/Control"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 672.0
+offset_right = 914.0
+offset_bottom = 703.0
+rotation = -1.5707964
+scale = Vector2(2, 2)
+text = ">"
+
+[node name="less" type="Button" parent="gameUI/Control"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 720.0
+offset_right = 914.0
+offset_bottom = 751.0
+rotation = -1.5707964
+scale = Vector2(2, 2)
+text = "<"
+
+[node name="maxpeople" type="Label" parent="gameUI"]
+offset_left = 832.0
+offset_top = 560.0
+offset_right = 923.0
+offset_bottom = 583.0
+scale = Vector2(2, 2)
+text = "max people"
+
+[node name="max" type="Label" parent="gameUI"]
+offset_left = 896.0
+offset_top = 600.0
+offset_right = 938.6666
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+horizontal_alignment = 1
+
+[node name="score" type="Label" parent="gameUI"]
+offset_left = 126.0
+offset_top = 658.0
+offset_right = 165.0
+offset_bottom = 681.0
+scale = Vector2(4, 4)
+
+[node name="Label" type="Label" parent="gameUI"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="screen" type="Area2D" parent="gameUI"]
+visible = false
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gameUI/screen"]
+visible = false
+position = Vector2(512, 386)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+script = ExtResource("3_sugp2")
+
+[node name="menuManager" type="CanvasLayer" parent="."]
+process_mode = 2
+
+[node name="menuManager" type="CenterContainer" parent="menuManager"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="gameUI/Control/more" to="gameUI" method="_on_more_pressed"]
+[connection signal="pressed" from="gameUI/Control/less" to="gameUI" method="_on_less_pressed"]

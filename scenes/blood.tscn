@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://qo4aukoyxdtr"]
+
+[ext_resource type="Script" uid="uid://dff7t2ajfgdxd" path="res://scripts/blood.gd" id="1_uli77"]
+[ext_resource type="Texture2D" uid="uid://bm6yiyen5pcfp" path="res://resources/blood/splat00.png" id="2_2klaf"]
+
+[node name="blood" type="Node2D"]
+scale = Vector2(0.05, 0.05)
+script = ExtResource("1_uli77")
+
+[node name="Splat" type="Sprite2D" parent="."]
+self_modulate = Color(0.6, 0.11119999, 0.036000002, 0.6392157)
+texture = ExtResource("2_2klaf")
