@@ -2,9 +2,11 @@ extends Node2D
 
 var current_menu = null
 var current_scene = null
+var current_ui = null
 
 @onready var level_manager = $levelManager
 @onready var menu_manager = $menuManager/menuManager
+@onready var ui_manager = $gameUi
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -49,16 +51,13 @@ func set_level(scene_path):
 	level_manager.add_child(current_scene)
 
 # switch between sandbox and survival
-func change_ui(scene_path):
-	if $levelManager/player:
-		var player = $levelManager/player
-		player.position = Vector2(0,0)
-	if current_scene:
-		current_scene.queue_free()
-		current_scene = null
-	var new_scene = load(scene_path)
-	current_scene = new_scene.instantiate()
-	level_manager.add_child(current_scene)
+func change_ui(menu_path: String):
+	if current_ui:
+		current_ui.queue_free()
+		current_ui = null
+	var new_ui_scene = load(menu_path)
+	current_ui = new_ui_scene.instantiate()
+	ui_manager.add_child(current_ui)
 
 func add_player():
 	if get_node_or_null("levelManager/player"):

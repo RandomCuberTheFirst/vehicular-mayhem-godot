@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bgd1c68sekoxr"]
+
+[ext_resource type="Script" uid="uid://bomc0oskfsdqj" path="res://scripts/survivalUi.gd" id="1_k4w5s"]
+
+[node name="survivalUi" type="CanvasLayer" unique_id=701417051]
+script = ExtResource("1_k4w5s")
+
+[node name="score" type="Label" parent="." unique_id=1104469840]
+offset_left = 126.0
+offset_top = 658.0
+offset_right = 165.0
+offset_bottom = 681.0
+scale = Vector2(4, 4)
+
+[node name="speed" type="Label" parent="." unique_id=1230065566]
+offset_right = 40.0
+offset_bottom = 23.0

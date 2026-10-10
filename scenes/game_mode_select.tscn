@@ -50,7 +50,7 @@ offset_left = 488.0
 offset_top = 562.0
 offset_right = 557.0
 offset_bottom = 593.0
-text = "survival"
+text = "Survival"
 
 [node name="LogoNoBg" type="Sprite2D" parent="." unique_id=711305122]
 z_index = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://77te7m3pbjj2"]
+[gd_scene format=3 uid="uid://77te7m3pbjj2"]
 
 [ext_resource type="Script" uid="uid://coeyaypi1obp6" path="res://scripts/person.gd" id="1_5dovg"]
 [ext_resource type="Texture2D" uid="uid://cukogdt7nnbx8" path="res://resources/deadpeople.png" id="2_h4n5y"]
@@ -77,7 +77,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mdp4j")
 }],
-"loop": false,
+"loop": 0,
 "name": &"blakeD",
 "speed": 5.0
 }, {
@@ -85,7 +85,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h4n5y")
 }],
-"loop": false,
+"loop": 0,
 "name": &"blakeI",
 "speed": 5.0
 }, {
@@ -96,7 +96,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pfaeq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"blakeW",
 "speed": 5.0
 }, {
@@ -104,7 +104,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_itwwj")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bobD",
 "speed": 5.0
 }, {
@@ -112,7 +112,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2jjoq")
 }],
-"loop": false,
+"loop": 0,
 "name": &"bobI",
 "speed": 5.0
 }, {
@@ -123,7 +123,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8qhow")
 }],
-"loop": true,
+"loop": 1,
 "name": &"bobW",
 "speed": 5.0
 }, {
@@ -131,7 +131,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_usdqe")
 }],
-"loop": false,
+"loop": 0,
 "name": &"karenD",
 "speed": 5.0
 }, {
@@ -139,7 +139,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_526uv")
 }],
-"loop": false,
+"loop": 0,
 "name": &"karenI",
 "speed": 5.0
 }, {
@@ -150,7 +150,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_06ebq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"karenW",
 "speed": 5.0
 }, {
@@ -158,7 +158,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cqdfk")
 }],
-"loop": false,
+"loop": 0,
 "name": &"kateD",
 "speed": 5.0
 }, {
@@ -166,7 +166,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gqr4j")
 }],
-"loop": false,
+"loop": 0,
 "name": &"kateI",
 "speed": 5.0
 }, {
@@ -177,7 +177,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kiup0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"kateW",
 "speed": 5.0
 }]
@@ -191,43 +191,43 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_h4n5y"]
 radius = 3.1622777
 
-[node name="person" type="CharacterBody2D"]
+[node name="person" type="CharacterBody2D" unique_id=1040446326]
 script = ExtResource("1_5dovg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1072896669]
 sprite_frames = SubResource("SpriteFrames_lik2q")
 animation = &"blakeI"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1046164827]
 shape = SubResource("CircleShape2D_tys1d")
 
-[node name="cartouch" type="Area2D" parent="."]
+[node name="cartouch" type="Area2D" parent="." unique_id=1142002480]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cartouch"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cartouch" unique_id=425411086]
 shape = SubResource("CircleShape2D_jf287")
 
-[node name="hospital" type="Area2D" parent="."]
+[node name="hospital" type="Area2D" parent="." unique_id=454325095]
 collision_layer = 0
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hospital"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hospital" unique_id=1676175732]
 shape = SubResource("CircleShape2D_h4n5y")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1326292959]
 path_postprocessing = 1
 avoidance_enabled = true
 max_speed = 30.0
 debug_path_custom_color = Color(1, 0, 0, 1)
 
-[node name="scream1" type="AudioStreamPlayer2D" parent="."]
+[node name="scream1" type="AudioStreamPlayer2D" parent="." unique_id=1734797539]
 stream = ExtResource("4_pfaeq")
 
-[node name="scream2" type="AudioStreamPlayer2D" parent="."]
+[node name="scream2" type="AudioStreamPlayer2D" parent="." unique_id=1296157660]
 stream = ExtResource("5_2jjoq")
 
-[node name="scream3" type="AudioStreamPlayer2D" parent="."]
+[node name="scream3" type="AudioStreamPlayer2D" parent="." unique_id=1429129882]
 stream = ExtResource("6_ym70v")
 
 [connection signal="body_entered" from="cartouch" to="." method="_on_area_2d_body_entered"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drj5bh08rn31b" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bstal73dsfrn7" path="res://resources/car.png" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://cajx0624562eb" path="res://resources/PNG/spinopel-car-engine-noise-321224.mp3" id="3_qhqgy"]
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 length = 0.001
@@ -732,4 +733,5 @@ vertices = PackedVector2Array(0, -16, 12, -10, 16, 0, 12, 12, 0, 16, -12, 11, -1
 affect_navigation_mesh = true
 carve_navigation_mesh = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=106759918]
+[node name="engineSound" type="AudioStreamPlayer2D" parent="." unique_id=106759918]
+stream = ExtResource("3_qhqgy")

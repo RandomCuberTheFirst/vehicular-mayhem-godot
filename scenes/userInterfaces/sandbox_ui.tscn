@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dhquv3tk01obt"]
+
+[ext_resource type="Script" uid="uid://c7ocxsa0e1sjw" path="res://scripts/sandboxUi.gd" id="1_vcc2q"]
+
+[node name="sandbox_ui" type="CanvasLayer" unique_id=1582449740]
+script = ExtResource("1_vcc2q")
+
+[node name="survival_view" type="Button" parent="." unique_id=1215877845]
+offset_left = 896.0
+offset_top = 16.0
+offset_right = 1007.0
+offset_bottom = 47.0
+text = "Survival View"
+
+[node name="people_controls" type="Control" parent="." unique_id=990770100]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="maxpeople" type="Label" parent="people_controls" unique_id=1501431851]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 560.0
+offset_right = 923.0
+offset_bottom = 583.0
+scale = Vector2(2, 2)
+text = "max people"
+
+[node name="max" type="Label" parent="people_controls" unique_id=778014387]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 600.0
+offset_right = 938.6666
+offset_bottom = 623.0
+scale = Vector2(1.5, 1.5)
+horizontal_alignment = 1
+
+[node name="more" type="Button" parent="people_controls" unique_id=516137114]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 672.0
+offset_right = 914.0
+offset_bottom = 703.0
+rotation = -1.5707964
+scale = Vector2(2, 2)
+text = ">"
+
+[node name="less" type="Button" parent="people_controls" unique_id=1375300682]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 720.0
+offset_right = 914.0
+offset_bottom = 751.0
+rotation = -1.5707964
+scale = Vector2(2, 2)
+text = "<"
+
+[node name="score" type="Label" parent="." unique_id=1375337358]
+offset_left = 126.0
+offset_top = 658.0
+offset_right = 165.0
+offset_bottom = 681.0
+scale = Vector2(4, 4)
+
+[node name="speed" type="Label" parent="." unique_id=1228053152]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="people_controls/more" to="." method="_on_more_pressed"]
+[connection signal="pressed" from="people_controls/less" to="." method="_on_less_pressed"]
