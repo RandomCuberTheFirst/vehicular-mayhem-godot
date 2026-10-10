@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b4nnub84h0q18"]
+
+[ext_resource type="Texture2D" uid="uid://mwl0ktydmteu" path="res://resources/buttons/panel-009.png" id="1_jyc5k"]
+[ext_resource type="Texture2D" uid="uid://bvnwcd7e80e2x" path="res://resources/logoNoBg.png" id="2_8s65g"]
+[ext_resource type="Script" uid="uid://c3ltkhed8gl2y" path="res://scripts/button_manager.gd" id="2_v842a"]
+
+[node name="game mode select" type="Node2D" unique_id=1006879947]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=645549167]
+z_index = 1
+offset_left = -15.0
+offset_top = -12.0
+offset_right = 1027.0
+offset_bottom = 773.0
+color = Color(0.17254902, 0.67058825, 1, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=683276758]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2095145867]
+visible = false
+z_index = 1
+offset_left = 407.0
+offset_top = 503.0
+offset_right = 601.0
+offset_bottom = 582.0
+texture = ExtResource("1_jyc5k")
+region_rect = Rect2(0, 0, 96, 96)
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+
+[node name="button-manager" type="Control" parent="." unique_id=908523633]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_v842a")
+
+[node name="Button" type="Button" parent="button-manager" unique_id=1221403447]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 478.0
+offset_right = 563.0
+offset_bottom = 509.0
+text = "Sandbox"
+
+[node name="Button2" type="Button" parent="button-manager" unique_id=1687124521]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 562.0
+offset_right = 557.0
+offset_bottom = 593.0
+text = "survival"
+
+[node name="LogoNoBg" type="Sprite2D" parent="." unique_id=711305122]
+z_index = 1
+position = Vector2(513.5, 207)
+texture = ExtResource("2_8s65g")
+
+[connection signal="pressed" from="button-manager/Button" to="button-manager" method="_on_button_pressed"]
+[connection signal="pressed" from="button-manager/Button2" to="button-manager" method="_on_button_2_pressed"]

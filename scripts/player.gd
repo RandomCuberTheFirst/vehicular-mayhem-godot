@@ -60,6 +60,6 @@ func _physics_process(_delta: float) -> void:
 		anim.play(color + "H")
 	
 	#UI
-	$"/root/Globals".speed = velocity.x
+	$"/root/Globals".speed = abs(velocity.x)+abs(velocity.y)
 	
 	move_and_slide()

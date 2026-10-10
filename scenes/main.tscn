@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckl88g4ovr36g"]
+[gd_scene format=3 uid="uid://ckl88g4ovr36g"]
 
 [ext_resource type="Script" uid="uid://cnl47o0hh27ii" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://3hxs05jqw0au" path="res://scenes/player.tscn" id="2_sugp2"]
@@ -8,26 +8,26 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
 size = Vector2(1024, 764)
 
-[node name="main" type="Node2D"]
+[node name="main" type="Node2D" unique_id=106922124]
 script = ExtResource("1_0wfyh")
 
-[node name="levelManager" type="Container" parent="."]
+[node name="levelManager" type="Container" parent="." unique_id=873363070]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="player" parent="levelManager" instance=ExtResource("2_sugp2")]
+[node name="player" parent="levelManager" unique_id=400427378 instance=ExtResource("2_sugp2")]
 z_index = 1
 
-[node name="gameUI" type="CanvasLayer" parent="."]
+[node name="gameUI" type="CanvasLayer" parent="." unique_id=358339705]
 script = ExtResource("3_jyhfs")
 
-[node name="Control" type="Control" parent="gameUI"]
+[node name="Control" type="Control" parent="gameUI" unique_id=1529230519]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="more" type="Button" parent="gameUI/Control"]
+[node name="more" type="Button" parent="gameUI/Control" unique_id=180084421]
 layout_mode = 0
 offset_left = 896.0
 offset_top = 672.0
@@ -37,7 +37,7 @@ rotation = -1.5707964
 scale = Vector2(2, 2)
 text = ">"
 
-[node name="less" type="Button" parent="gameUI/Control"]
+[node name="less" type="Button" parent="gameUI/Control" unique_id=1561127264]
 layout_mode = 0
 offset_left = 896.0
 offset_top = 720.0
@@ -47,7 +47,7 @@ rotation = -1.5707964
 scale = Vector2(2, 2)
 text = "<"
 
-[node name="maxpeople" type="Label" parent="gameUI"]
+[node name="maxpeople" type="Label" parent="gameUI" unique_id=1648995664]
 offset_left = 832.0
 offset_top = 560.0
 offset_right = 923.0
@@ -55,7 +55,7 @@ offset_bottom = 583.0
 scale = Vector2(2, 2)
 text = "max people"
 
-[node name="max" type="Label" parent="gameUI"]
+[node name="max" type="Label" parent="gameUI" unique_id=1497077396]
 offset_left = 896.0
 offset_top = 600.0
 offset_right = 938.6666
@@ -63,35 +63,35 @@ offset_bottom = 623.0
 scale = Vector2(1.5, 1.5)
 horizontal_alignment = 1
 
-[node name="score" type="Label" parent="gameUI"]
+[node name="score" type="Label" parent="gameUI" unique_id=613324710]
 offset_left = 126.0
 offset_top = 658.0
 offset_right = 165.0
 offset_bottom = 681.0
 scale = Vector2(4, 4)
 
-[node name="Label" type="Label" parent="gameUI"]
+[node name="Label" type="Label" parent="gameUI" unique_id=1690882122]
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="screen" type="Area2D" parent="gameUI"]
+[node name="screen" type="Area2D" parent="gameUI" unique_id=1136623927]
 visible = false
 collision_layer = 16
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="gameUI/screen"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gameUI/screen" unique_id=890515700]
 visible = false
 position = Vector2(512, 386)
 shape = SubResource("RectangleShape2D_jyhfs")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=943458924]
 zoom = Vector2(4, 4)
 script = ExtResource("3_sugp2")
 
-[node name="menuManager" type="CanvasLayer" parent="."]
+[node name="menuManager" type="CanvasLayer" parent="." unique_id=368060538]
 process_mode = 2
 
-[node name="menuManager" type="CenterContainer" parent="menuManager"]
+[node name="menuManager" type="CenterContainer" parent="menuManager" unique_id=1035282354]
 offset_right = 40.0
 offset_bottom = 40.0
 

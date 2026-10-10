@@ -1,11 +1,6 @@
-extends TextureButton
+extends Control
 
 @onready var main = get_tree().current_scene
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-func _on_pressed() -> void:
-	main.close_menu()
+func _on_start_pressed() -> void:
+	main.open_menu("res://scenes/game_mode_select.tscn")

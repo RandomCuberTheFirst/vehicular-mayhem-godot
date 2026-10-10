@@ -12,7 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	score.text = str($"/root/Globals".points)
-	speed.text = str($"/root/Globals".speed)
+	speed.text = str(floor($"/root/Globals".speed))
 	maxpeople.text = str($"/root/Globals".MAX_PEOPLE)
 
 

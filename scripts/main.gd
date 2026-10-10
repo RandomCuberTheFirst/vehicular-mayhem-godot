@@ -48,6 +48,18 @@ func set_level(scene_path):
 	current_scene = new_scene.instantiate()
 	level_manager.add_child(current_scene)
 
+# switch between sandbox and survival
+func change_ui(scene_path):
+	if $levelManager/player:
+		var player = $levelManager/player
+		player.position = Vector2(0,0)
+	if current_scene:
+		current_scene.queue_free()
+		current_scene = null
+	var new_scene = load(scene_path)
+	current_scene = new_scene.instantiate()
+	level_manager.add_child(current_scene)
+
 func add_player():
 	if get_node_or_null("levelManager/player"):
 		$levelManager/player.queue_free()
