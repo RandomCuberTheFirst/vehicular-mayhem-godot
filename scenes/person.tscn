@@ -191,7 +191,11 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_h4n5y"]
 radius = 3.1622777
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bcwru"]
+radius = 29.017237
+
 [node name="person" type="CharacterBody2D" unique_id=1040446326]
+collision_layer = 65
 script = ExtResource("1_5dovg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1072896669]
@@ -230,6 +234,15 @@ stream = ExtResource("5_2jjoq")
 [node name="scream3" type="AudioStreamPlayer2D" parent="." unique_id=1429129882]
 stream = ExtResource("6_ym70v")
 
+[node name="warningRadius" type="Area2D" parent="." unique_id=759498736]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="warningRadius" unique_id=139205644]
+shape = SubResource("CircleShape2D_bcwru")
+
 [connection signal="body_entered" from="cartouch" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="cartouch" to="." method="_on_area_2d_body_exited"]
 [connection signal="area_entered" from="hospital" to="." method="_on_hospital_area_entered"]
+[connection signal="area_entered" from="warningRadius" to="." method="_on_warning_radius_area_entered"]
+[connection signal="body_entered" from="warningRadius" to="." method="_on_warning_radius_body_entered"]

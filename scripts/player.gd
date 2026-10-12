@@ -71,7 +71,6 @@ func _physics_process(_delta: float) -> void:
 			$engineSound.playing = true
 		$engineSound.pitch_scale = $"/root/Globals".speed*2/100
 		$engineSound.volume_db = ($"/root/Globals".speed/100)*20-10
-		print($engineSound.volume_db)
 	else:
 		$engineSound.playing = false
 	# *2/100

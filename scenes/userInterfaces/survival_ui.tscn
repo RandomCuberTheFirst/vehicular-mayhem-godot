@@ -11,7 +11,12 @@ offset_top = 658.0
 offset_right = 165.0
 offset_bottom = 681.0
 scale = Vector2(4, 4)
+text = "8 kills"
 
 [node name="speed" type="Label" parent="." unique_id=1230065566]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 152.0
+offset_top = 616.0
+offset_right = 221.0
+offset_bottom = 639.0
+scale = Vector2(2, 2)
+text = "100 MPH"

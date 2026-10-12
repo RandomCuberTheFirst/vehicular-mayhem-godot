@@ -74,6 +74,7 @@ LET_ME_LEAVE_BITCH={
 2d_physics/layer_3="car"
 2d_physics/layer_4="hospital"
 2d_physics/layer_5="spawn"
+2d_physics/layer_7="warning"
 
 [rendering]
 
